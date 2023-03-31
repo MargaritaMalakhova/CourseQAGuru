@@ -16,7 +16,7 @@ public class PracticeFormTest extends TestBase {
         executeJavaScript("$('footer').remove()");
         $("#firstName").setValue("Angelina");
         $("#lastName").setValue("Smith");
-        $("div.col-md-9.col-sm-12 > div:nth-child(2)").click();
+        $(byText("Female")).click();
         $("#userEmail").setValue("asas@mail.ru");
         $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
@@ -26,8 +26,8 @@ public class PracticeFormTest extends TestBase {
         $(byText("2000")).click();
         $(".react-datepicker__day--001").click();
         $("#subjectsInput").setValue("comp").pressEnter();
-        $("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(2)").click();
-        $("#uploadPicture").uploadFile(new File("src\\test\\resources\\538439.jpg"));
+        $(byText("Reading")).click();
+        $("#uploadPicture").uploadFile(new File("src/test/resources/538439.jpg"));
         $("#currentAddress").setValue("Some street 1");
         executeJavaScript("window.scrollBy(0,2500)");
         $("#state").click();
