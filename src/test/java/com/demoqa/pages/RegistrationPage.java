@@ -32,13 +32,21 @@ public class RegistrationPage {
     // Actions
     public RegistrationPage openPage() {
         open("/automation-practice-form");
+
+        return this;
+    }
+
+    public RegistrationPage checkFormOnPage() {
         formHeaderText.shouldHave(text("Student Registration Form"));
+
+        return this;
+    }
+    public RegistrationPage removeBunners() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
         return this;
     }
-
     public RegistrationPage setFirstName(String value) {
         firstNameInput.setValue(value);
 

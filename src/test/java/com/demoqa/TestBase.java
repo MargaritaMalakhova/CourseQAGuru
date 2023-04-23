@@ -5,8 +5,7 @@ import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
-    RegistrationPage registrationPage = new RegistrationPage();
-    //LoginPage loginPage = new LoginPage();
+
 
     @BeforeAll
     static void beforeAll() {
