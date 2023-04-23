@@ -1,12 +1,16 @@
 package com.demoqa;
 
+import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
 
 public class PracticeFormTestPageObject extends TestBase {
+    RegistrationPage registrationPage = new RegistrationPage();
     @Test
     void successfulFormTest() {
         registrationPage.openPage();
+        registrationPage.checkFormOnPage();
+        registrationPage.removeBunners();
         registrationPage.setFirstName("Angelina");
         registrationPage.setLastName("Smith");
         registrationPage.setGender("Female");
