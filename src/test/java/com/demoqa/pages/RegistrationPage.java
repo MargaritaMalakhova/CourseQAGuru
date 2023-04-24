@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import java.io.File;
 
 import com.demoqa.pages.components.CalendarComponent;
+import com.demoqa.pages.components.DateBirthDto;
 import com.demoqa.pages.components.ResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
@@ -121,9 +122,17 @@ public class RegistrationPage {
         return this;
     }
 
+    @Deprecated
     public RegistrationPage setBirthDate(String day, String month, String year) {
         dateOfBirthInput.click();
         calendarComponent.setDate(day, month, year);
+
+        return this;
+    }
+
+    public RegistrationPage setBirthDate(DateBirthDto dateBirthDto) {
+        dateOfBirthInput.click();
+        calendarComponent.setDate(dateBirthDto);
 
         return this;
     }
