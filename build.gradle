@@ -35,10 +35,21 @@ dependencies {
     )
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
+tasks.withType(Test) {
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
 
 test {
     useJUnitPlatform()
+}
+
+task simple_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("faker")
+    }
 }
