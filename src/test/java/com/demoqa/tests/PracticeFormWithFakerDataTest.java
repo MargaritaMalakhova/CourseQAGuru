@@ -3,9 +3,10 @@ package com.demoqa.tests;
 import com.demoqa.pages.RegistrationPage;
 import com.demoqa.pages.components.DateBirthDto;
 import com.demoqa.utils.RandomUtils;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-
+@Tag("faker")
 public class PracticeFormWithFakerDataTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     RandomUtils randomUtils = new RandomUtils();
