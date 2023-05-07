@@ -11,9 +11,11 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
+
+
     }
 }
