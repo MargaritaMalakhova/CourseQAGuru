@@ -48,8 +48,8 @@ test {
     useJUnitPlatform()
 }
 
-task faker_test(type: Test) {
+task remote_test(type: Test) {
     useJUnitPlatform{
-        includeTags("faker")
+        includeTags("remote")
     }
 }
