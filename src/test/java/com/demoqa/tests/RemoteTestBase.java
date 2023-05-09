@@ -16,7 +16,7 @@ public class RemoteTestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.remote = System.getProperty("remote");
-        Configuration.baseUrl = System.getProperty("base_url");
+        Configuration.baseUrl = System.getProperty("base_url","https://demoqa.com");
         Configuration.browserSize = System.getProperty("browser_size");
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browser_version");
