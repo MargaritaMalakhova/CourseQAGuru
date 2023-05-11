@@ -16,10 +16,10 @@ public class RemoteTestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.remote = System.getProperty("remote");
-        Configuration.baseUrl = System.getProperty("base_url");
-        Configuration.browserSize = System.getProperty("browser_size");
+        Configuration.baseUrl = System.getProperty("baseUrl");
+        Configuration.browserSize = System.getProperty("browserSize");
         Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browser_version");
+        Configuration.browserVersion = System.getProperty("browserVersion");
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
