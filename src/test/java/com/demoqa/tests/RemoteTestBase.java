@@ -18,8 +18,9 @@ public class RemoteTestBase {
         Configuration.remote = System.getProperty("remote");
         Configuration.baseUrl = System.getProperty("baseUrl");
         Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browserVersion");
+        String[] browser = System.getProperty("browser").split(":");
+        Configuration.browser = browser[0];
+        Configuration.browserVersion = browser[1];
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
